@@ -77,8 +77,8 @@ Vagrant.configure("2") do |config|
 
     # inline basic provision: update
     main.vm.provision "Update OS", privileged: true, type: "shell", inline: "sudo apt-get -qq -y update && sudo apt-get -qq -y upgrade"
-	# custom script for utils provision
-	main.vm.provision :shell, path: ".vg-provision/bootstrap_ubuntu_utils.sh"
+    # custom script for utils provision
+    main.vm.provision :shell, path: ".vg-provision/bootstrap_ubuntu_utils.sh"
     # custom script for docker provision
     # ref. https://docs.docker.com/engine/install/ubuntu/
     main.vm.provision :shell, path: ".vg-provision/bootstrap_ubuntu_docker.sh"
