@@ -5,15 +5,21 @@ Vagrant + Docker
 ## Prerequirements
 
 ### Tested configuration:
+Tested with:
  - Oracle VirtualBox (with VirtualBox VM Extension Pack) v6.1.18 r142142 (Qt5.6.2) 
  - Vagrant v2.2.15
-   - plugins: (to show installed list, exec `$ vagrant plugin list`)
+   - plugins:
      - vagrant-proxyconf (2.0.10, global)
      - vagrant-reload (0.0.1, global)
      - vagrant-vbguest (0.29.0, global)
  - Guest OS: Ubuntu 20.10
 
+
+_NOTE_: to show installed plugins, exec `$ vagrant plugin list`
+
 ## Execution
+
+Execute `$ vagrant up` to initialize (and provision only the first time) the Ubuntu VM with Docker
 
 ## Tips
 
