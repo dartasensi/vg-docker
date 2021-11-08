@@ -5,9 +5,9 @@ Vagrant.configure("2") do |config|
   # #####
   # configuration variables
   # #####
-  # ubuntu 20.10
-  _vm_box = "ubuntu/groovy64"
-  _vm_name = "vg-ubuntu20.10-docker"
+  # ubuntu 20.04 LTS
+  _vm_box = "ubuntu/focal64"
+  _vm_name = "vg-ubuntu-docker"
   _vm_hostname = "main.example.com"
 
   # #####
