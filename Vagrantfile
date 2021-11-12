@@ -21,7 +21,9 @@ Vagrant.configure("2") do |config|
   config.vbguest.installer_options = { allow_kernel_upgrade: true }
 
   config.vm.define "main", primary: true do |main|
-    main.vm.hostname = _vm_hostname
+    if defined?(_vm_hostname)
+      main.vm.hostname = _vm_hostname
+    end
 
     # use the default sync folder /vagrant
     main.vm.synced_folder ".", "/vagrant", automount: true, disabled: false
@@ -46,7 +48,9 @@ Vagrant.configure("2") do |config|
     main.vm.network "forwarded_port", host: 18085, guest: 8085, auto_correct: true
 
     main.vm.provider :virtualbox do |vb|
-      vb.name = _vm_name
+      if defined?(_vm_name)
+        vb.name = _vm_name
+      end
       # low perf settings
       #vb.cpus = 2
       #vb.memory = "4096"
