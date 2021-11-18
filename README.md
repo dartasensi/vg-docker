@@ -44,8 +44,6 @@ Behind corporate proxies, the download of a Vagrant box image could be problemat
 In this case, you should add manually the box through the `add` command, together with the parameter `--insecure` in order to disable SSL checks.
 E.g. ` vagrant box add --provider virtualbox --insecure ubuntu/focal64`
 
-### Activate bash completion with root user
+### Bash completion
 
-Open `/root/.bashrc` and remove the comments from lines (~98-100) like:
-
-_TODO_
+Check the contents of user's `.bashrc` and remove the comments.
