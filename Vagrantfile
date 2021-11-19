@@ -36,10 +36,10 @@ Vagrant.configure("2") do |config|
     #end
 
     # inside the guest vm, connect with some default ports
-    main.vm.network "forwarded_port", host: 10080, guest: 80, auto_correct: true
-    main.vm.network "forwarded_port", host: 10443, guest: 443, auto_correct: true
-    main.vm.network "forwarded_port", host: 15432, guest: 5432, auto_correct: true
-    main.vm.network "forwarded_port", host: 18080, guest: 8080, auto_correct: true
+    main.vm.network "forwarded_port", host: 20080, guest: 80, auto_correct: true
+    main.vm.network "forwarded_port", host: 20443, guest: 443, auto_correct: true
+    main.vm.network "forwarded_port", host: 25432, guest: 5432, auto_correct: true
+    main.vm.network "forwarded_port", host: 28080, guest: 8080, auto_correct: true
 
     main.vm.provider :virtualbox do |vb|
       if defined?(_vm_name)
