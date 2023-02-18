@@ -6,6 +6,15 @@ Vagrant + Docker
 
 ### Tested configuration:
 Tested with:
+- $ vagrant -v
+- Vagrant 2.3.4
+- $ vagrant plugin list
+- vagrant-proxyconf (2.0.10, global)
+- vagrant-reload (0.0.1, global)
+- vagrant-vbguest (0.31.0, global)
+
+
+Tested with:
  - Oracle VirtualBox (with VirtualBox VM Extension Pack) v6.1.18 r142142 (Qt5.6.2) 
  - Vagrant v2.2.15
    - plugins:

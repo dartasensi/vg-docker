@@ -41,6 +41,7 @@ sudo apt-get -qq -y update && sudo apt-get -qq -y upgrade
 echo
 echo ">>> updating and installing utils packages..."
 sudo apt-get -qq -y update && sudo apt-get -qq -y install \
+        net-tools \
         tree \
         screen \
         bash-completion
