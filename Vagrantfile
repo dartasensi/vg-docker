@@ -71,6 +71,12 @@ Vagrant.configure("2") do |config|
       vb.customize ["modifyvm", :id, "--vram", "16"]
       vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
       vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
+
+      # prevent from interfering with host audio stack
+      vb.customize ["modifyvm", :id, "--audio", "none"]
+      # ensure to have usb disabled
+      vb.customize ["modifyvm", :id, "--usb", "off"]
+      vb.customize ["modifyvm", :id, "--usbehci", "off"]
     end
 
     # inline basic provision: update
